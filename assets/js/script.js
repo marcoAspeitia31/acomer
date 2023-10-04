@@ -27,8 +27,10 @@ Developer: Najmul Huda Eimon
  
 ====================================================================*/
 
-$(function(){
+(function ($) {
     "use strict";
+
+    console.log()
 
     
     
@@ -457,5 +459,4 @@ $(function(){
         }
     }
     
-
-});
+})(jQuery);

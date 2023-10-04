@@ -22,6 +22,19 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<!-- start preloader area -->
+<div class="preloader">
+	<div class="circle1"></div>
+	<div class="circle2"></div>
+</div>
+<!-- end preloader area -->
+
+<!-- start top-tp button area -->
+<button class="top-btn">
+	<i class="fas fa-chevron-up"></i>
+</button>
+<!-- end top-tp button area -->
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'acomer' ); ?></a>
 
