@@ -10,7 +10,7 @@
 ?>
 
 <!-- start banner area -->
-<section class="home1 banner" data-img="assets/images/home1/banner/banner-bg.png">
+<section class="home1 banner" data-img="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/banner/banner-bg.png">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -24,12 +24,12 @@
                                 <ul class="d-flex wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s">
                                     <li>
                                         <a href="#!">
-                                            <img src="assets/images/home1/banner/applestore.png" alt="Apple Store">
+                                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/banner/applestore.png" alt="Apple Store">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#!">
-                                            <img src="assets/images/home1/banner/playstore.png" alt="Play Store">
+                                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/banner/playstore.png" alt="Play Store">
                                         </a>
                                     </li>
                                 </ul>
@@ -37,7 +37,7 @@
                         </div>
                         <div class="col-lg-5 order-0 order-lg-1">
                             <div class="image-area text-end wow fadeInRight" data-wow-delay="0.3s" data-wow-duration="1s">
-                                <img src="assets/images/home1/banner/banner-img.png" alt="Banner">
+                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/banner/banner-img.png" alt="Banner">
                             </div>
                         </div>
                     </div>
@@ -101,7 +101,7 @@
 <!-- end feature area -->
 
 <!-- start counter area -->
-<section class="home1 counter p-100" data-img="assets/images/home1/count/bg.jpg">
+<section class="home1 counter p-100" data-img="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/count/bg.jpg">
     <div class="overlay">
         <div class="container">
             <div class="row">
@@ -155,7 +155,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-5">
                         <div class="image text-center wow fadeInLeft" data-wow-delay="0.3s" data-wow-duration="1s">
-                            <img src="assets/images/home1/about/img1.png" alt="About">
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/about/img1.png" alt="About">
                         </div>
                     </div>
                     <div class="col-lg-7">
@@ -216,7 +216,7 @@
                     </div>
                     <div class="col-lg-5 order-0 order-lg-1">
                         <div class="image text-center wow fadeInRight" data-wow-delay="0.3s" data-wow-duration="1s">
-                            <img src="assets/images/home1/about/img2.png" alt="About">
+                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/about/img2.png" alt="About">
                         </div>
                     </div>
                 </div>
@@ -252,7 +252,7 @@
         <div class="row filters">
             <div class="col-xl-3 col-lg-4 col-md-6 mix ios des">
                 <div class="item wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-                    <img src="assets/images/home1/project/img1.jpg" alt="Project">
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/project/img1.jpg" alt="Project">
                     <div class="overlay">
                         <div class="text">
                             <h6>app development</h6>
@@ -264,7 +264,7 @@
             </div>
             <div class="col-xl-3 col-lg-4 col-md-6 mix and app">
                 <div class="item wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
-                    <img src="assets/images/home1/project/img2.jpg" alt="Project">
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/project/img2.jpg" alt="Project">
                     <div class="overlay">
                         <div class="text">
                             <h6>app development</h6>
@@ -276,7 +276,7 @@
             </div>
             <div class="col-xl-3 col-lg-4 col-md-6 mix and mar">
                 <div class="item wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
-                    <img src="assets/images/home1/project/img3.jpg" alt="Project">
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/project/img3.jpg" alt="Project">
                     <div class="overlay">
                         <div class="text">
                             <h6>app marketing</h6>
@@ -288,7 +288,7 @@
             </div>
             <div class="col-xl-3 col-lg-4 col-md-6 mix des app">
                 <div class="item wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s">
-                    <img src="assets/images/home1/project/img4.jpg" alt="Project">
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/project/img4.jpg" alt="Project">
                     <div class="overlay">
                         <div class="text">
                             <h6>app making</h6>
@@ -300,7 +300,7 @@
             </div>
             <div class="col-xl-3 col-lg-4 col-md-6 mix ios and">
                 <div class="item wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-                    <img src="assets/images/home1/project/img5.jpg" alt="Project">
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/project/img5.jpg" alt="Project">
                     <div class="overlay">
                         <div class="text">
                             <h6>app developemnt</h6>
@@ -312,7 +312,7 @@
             </div>
             <div class="col-xl-3 col-lg-4 col-md-6 mix des mar">
                 <div class="item wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
-                    <img src="assets/images/home1/project/img6.jpg" alt="Project">
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/project/img6.jpg" alt="Project">
                     <div class="overlay">
                         <div class="text">
                             <h6>app making</h6>
@@ -324,7 +324,7 @@
             </div>
             <div class="col-xl-3 col-lg-4 col-md-6 mix app ios">
                 <div class="item wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
-                    <img src="assets/images/home1/project/img7.jpg" alt="Project">
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/project/img7.jpg" alt="Project">
                     <div class="overlay">
                         <div class="text">
                             <h6>app developemnt</h6>
@@ -336,7 +336,7 @@
             </div>
             <div class="col-xl-3 col-lg-4 col-md-6 mix ios and">
                 <div class="item wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s">
-                    <img src="assets/images/home1/project/img8.jpg" alt="Project">
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/project/img8.jpg" alt="Project">
                     <div class="overlay">
                         <div class="text">
                             <h6>app marketing</h6>
@@ -366,7 +366,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="item wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1s">
                             <div class="image">
-                                <img src="assets/images/home1/team/img1.jpg" alt="Team">
+                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/team/img1.jpg" alt="Team">
                             </div>
                             <a href="team-detail.html">
                                 <h6>Sarrison Samuel</h6>
@@ -383,7 +383,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="item wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
                             <div class="image">
-                                <img src="assets/images/home1/team/img2.jpg" alt="Team">
+                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/team/img2.jpg" alt="Team">
                             </div>
                             <a href="team-detail.html">
                                 <h6>warrison Samuel</h6>
@@ -400,7 +400,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="item wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
                             <div class="image">
-                                <img src="assets/images/home1/team/img3.jpg" alt="Team">
+                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/team/img3.jpg" alt="Team">
                             </div>
                             <a href="team-detail.html">
                                 <h6>harrison Samuel</h6>
@@ -430,7 +430,7 @@
                     <div class="row">
                         <div class="col-lg-5">
                             <div class="image">
-                                <img src="assets/images/home1/mobile.png" alt="Mobile">
+                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/mobile.png" alt="Mobile">
                             </div>
                         </div>
                         <div class="col-lg-7">
@@ -440,12 +440,12 @@
                                 <ul class="d-flex">
                                     <li>
                                         <a href="#!">
-                                            <img src="assets/images/home1/banner/applestore.png" alt="Apple Store">
+                                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/banner/applestore.png" alt="Apple Store">
                                         </a>
                                     </li>
                                     <li>
                                         <a href="#!">
-                                            <img src="assets/images/home1/banner/playstore.png" alt="Play Store">
+                                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/banner/playstore.png" alt="Play Store">
                                         </a>
                                     </li>
                                 </ul>
@@ -460,7 +460,7 @@
 <!-- end mobile area -->
 
 <!-- start video area -->
-<section class="home1 video" data-img="assets/images/home1/video-bg.jpg">
+<section class="home1 video" data-img="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/video-bg.jpg">
     <div class="overlay">
         <div class="container">
             <div class="row">
@@ -497,17 +497,17 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="image">
-                                            <img src="assets/images/home1/client/img1.jpg" alt="Client">
+                                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/client/img1.jpg" alt="Client">
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="image">
-                                            <img src="assets/images/home1/client/img2.jpg" alt="Client">
+                                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/client/img2.jpg" alt="Client">
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="image">
-                                            <img src="assets/images/home1/client/img3.jpg" alt="Client">
+                                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/client/img3.jpg" alt="Client">
                                         </div>
                                     </div>
                                 </div>
@@ -551,27 +551,27 @@
         <div class="row">
             <div class="col">
                 <div class="brand-logo text-center wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-                    <a href="#!"><img src="assets/images/home1/brand/brand-logo1.png" class="img-fluid" alt="Brand Logo" /></a>
+                    <a href="#!"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/brand/brand-logo1.png" class="img-fluid" alt="Brand Logo" /></a>
                 </div>
             </div>
             <div class="col">
                 <div class="brand-logo text-center wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
-                    <a href="#!"><img src="assets/images/home1/brand/brand-logo2.png" class="img-fluid" alt="Brand Logo" /></a>
+                    <a href="#!"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/brand/brand-logo2.png" class="img-fluid" alt="Brand Logo" /></a>
                 </div>
             </div>
             <div class="col mt-sm-30">
                 <div class="brand-logo text-center wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
-                    <a href="#!"><img src="assets/images/home1/brand/brand-logo3.png" class="img-fluid" alt="Brand Logo" /></a>
+                    <a href="#!"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/brand/brand-logo3.png" class="img-fluid" alt="Brand Logo" /></a>
                 </div>
             </div>
             <div class="col mt-sm-30">
                 <div class="brand-logo text-center wow fadeInUp" data-wow-delay="0.7s" data-wow-duration="1s">
-                    <a href="#!"><img src="assets/images/home1/brand/brand-logo4.png" class="img-fluid" alt="Brand Logo" /></a>
+                    <a href="#!"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/brand/brand-logo4.png" class="img-fluid" alt="Brand Logo" /></a>
                 </div>
             </div>
             <div class="col mt-sm-30">
                 <div class="brand-logo text-center wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s">
-                    <a href="#!"><img src="assets/images/home1/brand/brand-logo5.png" class="img-fluid" alt="Brand Logo" /></a>
+                    <a href="#!"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/brand/brand-logo5.png" class="img-fluid" alt="Brand Logo" /></a>
                 </div>
             </div>
         </div>
@@ -595,7 +595,7 @@
                         <div class="single-blog wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
                             <div class="image">
                                 <a href="blog-detail.html">
-                                    <img src="assets/images/home1/blog/blog1.jpg" alt="Blog">
+                                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/blog/blog1.jpg" alt="Blog">
                                 </a>
                             </div>
                             <div class="content">
@@ -616,7 +616,7 @@
                         <div class="single-blog wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
                             <div class="image">
                                 <a href="blog-detail.html">
-                                    <img src="assets/images/home1/blog/blog2.jpg" alt="Blog">
+                                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/blog/blog2.jpg" alt="Blog">
                                 </a>
                             </div>
                             <div class="content">
@@ -637,7 +637,7 @@
                         <div class="single-blog wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s">
                             <div class="image">
                                 <a href="blog-detail.html">
-                                    <img src="assets/images/home1/blog/blog3.jpg" alt="Blog">
+                                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/blog/blog3.jpg" alt="Blog">
                                 </a>
                             </div>
                             <div class="content">
