@@ -692,7 +692,6 @@ p {
 .top-btn {
   height: 45px;
   width: 45px;
-  line-height: 45px;
   text-align: center;
   background: var(--gradient);
   position: fixed;

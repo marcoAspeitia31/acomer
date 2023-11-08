@@ -49,7 +49,8 @@ function acomer_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'primary-menu' => esc_html__( 'Primary', 'acomer' ),
+			'primary-menu' => esc_html__( 'Primary Menu', 'acomer' ),
+			'secondary-menu' => esc_html__( 'Secondary Menu', 'acomer' ),
 		)
 	);
 
