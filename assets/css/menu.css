@@ -30,7 +30,7 @@
 .header-menu ul ul li:hover > a,
 .header-menu ul ul li.active > a,
 .header-menu ul ul li > a:hover{
-    color: var(--deep-orange);
+    color: var(--deep-primary);
 }
 .header-menu > ul > li.active > a ,
 .header-menu > ul > li:hover > a ,
@@ -40,7 +40,7 @@
 }
 .inner-page .header-menu > ul > li.active > a ,
 .inner-page .header-menu > ul > li:hover > a {
-    color: var(--deep-orange);
+    color: var(--deep-primary);
 }
 
 
@@ -147,7 +147,7 @@ span.submenu-button:before {
 }
 .inner-page .header-menu > ul > li.active > .submenu-button:before,
 .inner-page .header-menu > ul > li:hover > .submenu-button:before {
-    color: var(--deep-orange);
+    color: var(--deep-primary);
 }
 
 
@@ -163,11 +163,11 @@ span.submenu-button:before {
 @media (max-width: 991.98px) {
     .header-menu > ul > li.active > a ,
     .header-menu > ul > li:hover > a {
-        color: var(--deep-orange);
+        color: var(--deep-primary);
     }
     .header-menu > ul > li.active > .submenu-button:before,
     .header-menu > ul > li:hover > .submenu-button:before {
-        color: var(--deep-orange);
+        color: var(--deep-primary);
     }
 
     span.submenu-button:before {
