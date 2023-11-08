@@ -41,7 +41,7 @@
 	<!-- start header area -->
     <header id="masthead" class="site-header">
         <!-- start menubar area -->
-        <section class="menubar">
+        <section class="menubar main-navigation">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">

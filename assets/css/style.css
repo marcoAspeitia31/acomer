@@ -2040,7 +2040,7 @@ p {
   padding-bottom: 125px;
   background: rgba(0, 0, 0, 0.6);
 }
-.inner-page.banner h2{
+.inner-page.banner h1{
   font-family: var(--josefin);
   font-size: 45px;
   font-weight: 700;
