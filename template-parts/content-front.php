@@ -10,7 +10,7 @@
 ?>
 
 <!-- start banner area -->
-<section class="home1 banner" data-img="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/banner/banner-bg-1.png">
+<section class="home1 banner" data-img="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/banner/banner-bg-2.png">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">

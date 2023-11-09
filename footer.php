@@ -86,10 +86,12 @@
                                     <p>Copyright &copy; 2023 Al Right Reserved</p>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
-									<?php
-									/* translators: 1: Theme name, 2: Theme author. */
-									printf( esc_html__( 'Diseño realizado por %1$s.', 'acomer' ), '<a href="https://devitm.com/">DevITM</a>' );
-									?>
+                                    <p class="text-end">
+                                        <?php
+                                        /* translators: 1: Theme name, 2: Theme author. */
+                                        printf( esc_html__( 'Diseño realizado por %1$s.', 'acomer' ), '<a href="https://devitm.com/">DevITM</a>' );
+                                        ?>
+                                    </p>									
                                 </div>
                             </div>
                         </div>
