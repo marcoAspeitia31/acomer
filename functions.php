@@ -100,6 +100,12 @@ function acomer_setup() {
 			'flex-height' => true,
 		)
 	);
+
+	/**
+	 * Register custom images sizes
+	 */
+	add_image_size( 'blog-grid', 370, 300, true );
+	
 }
 add_action( 'after_setup_theme', 'acomer_setup' );
 

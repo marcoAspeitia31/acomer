@@ -27,7 +27,7 @@ if ( ! function_exists( 'acomer_posted_on' ) ) :
 
 		$posted_on = sprintf(
 			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'acomer' ),
+			esc_html_x( 'Publicado en %s', 'post date', 'acomer' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 

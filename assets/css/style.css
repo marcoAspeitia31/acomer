@@ -1488,7 +1488,7 @@ p {
   color: var(--grey);
 }
 
-.home1.blog .single-blog .content ul li a i{
+.home1.blog .single-blog .content ul li i{
   padding-right: 10px;
   background: var(--gradient);
   -webkit-background-clip: text;
