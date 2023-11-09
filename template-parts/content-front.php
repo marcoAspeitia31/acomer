@@ -36,7 +36,7 @@
 						</div>
 						<div class="col-lg-5 order-0 order-lg-1">
 							<div class="image-area text-end wow fadeInRight" data-wow-delay="0.3s" data-wow-duration="1s">
-								<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/banner/banner-img.png" alt="Banner">
+								<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/banner/banner-img1.png" alt="Banner">
 							</div>
 						</div>
 					</div>
@@ -154,7 +154,7 @@
 				<div class="row align-items-center">
 					<div class="col-lg-5">
 						<div class="image text-center wow fadeInLeft" data-wow-delay="0.3s" data-wow-duration="1s">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/about/img1.png" alt="About">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/about/img-app-1.png" alt="About">
 						</div>
 					</div>
 					<div class="col-lg-7">
@@ -215,7 +215,7 @@
 					</div>
 					<div class="col-lg-5 order-0 order-lg-1">
 						<div class="image text-center wow fadeInRight" data-wow-delay="0.3s" data-wow-duration="1s">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/about/img2.png" alt="About">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/about/img-app-2.png" alt="About">
 						</div>
 					</div>
 				</div>
@@ -234,7 +234,7 @@
 					<div class="row">
 						<div class="col-lg-5">
 							<div class="image">
-								<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/mobile.png" alt="Mobile">
+								<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/img-cta-1.png" alt="Mobile">
 							</div>
 						</div>
 						<div class="col-lg-7">
@@ -264,7 +264,7 @@
 <!-- end mobile area -->
 
 <!-- start video area -->
-<section class="home1 video" data-img="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/video-bg.jpg">
+<section class="home1 video" data-img="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/video-img-bg.jpg">
 	<div class="overlay">
 		<div class="container">
 			<div class="row">
