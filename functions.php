@@ -49,7 +49,7 @@ function acomer_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'primary-menu' => esc_html__( 'Primary Menu', 'acomer' ),
+			'primary-menu'   => esc_html__( 'Primary Menu', 'acomer' ),
 			'secondary-menu' => esc_html__( 'Secondary Menu', 'acomer' ),
 		)
 	);
@@ -165,7 +165,7 @@ function acomer_scripts() {
 	wp_enqueue_script( 'swiper', get_template_directory_uri() . '/assets/plugins/swiper-bundle.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'wow', get_template_directory_uri() . '/assets/plugins/wow.min.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'main', get_template_directory_uri() . '/assets/js/script.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'acomer-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'acomer-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
