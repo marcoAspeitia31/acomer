@@ -1,6 +1,6 @@
 <?php
 /**
- * acomer Theme Customizer
+ * Theme acomer Theme Customizer
  *
  * @package acomer
  */

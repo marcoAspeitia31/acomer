@@ -108,11 +108,11 @@
 	<!-- start custom cursor area -->
 	<div class="custom-cursor">
 		<div id="cursor">
-		  <div id="cursor-ball"></div>
+			<div id="cursor-ball"></div>
 		</div>
 	</div>
 	<!-- end custom cursor area -->
-	
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
