@@ -292,6 +292,11 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod te incididunt ut labore et dolore magna aliqua. Ut enim ad minim to eismud </p>
 				</div>
 			</div>
+			<?php
+			$testimonials = acomer_testimonials();
+
+			if( $testimonials->have_posts() ):
+			?>
 			<div class="col-lg-12">
 				<div class="row align-items-center">
 					<div class="col-lg-5 position-relative">
@@ -299,51 +304,49 @@
 							<div class="shape"></div>
 							<div class="client-img-slider swiper-container">
 								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<div class="image">
-											<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/client/img1.jpg" alt="Client">
+									<?php
+									while( $testimonials->have_posts() ):
+										$testimonials->the_post();
+										?>
+										<div class="swiper-slide">
+											<div class="image">
+												<?php the_post_thumbnail( 'testimonial-thumbnail', array( 'class' => 'img-fluid' ) ); ?>
+											</div>
 										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="image">
-											<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/client/img2.jpg" alt="Client">
-										</div>
-									</div>
-									<div class="swiper-slide">
-										<div class="image">
-											<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/client/img3.jpg" alt="Client">
-										</div>
-									</div>
+										<?php
+									endwhile;
+									?>
 								</div>
 							</div>
 						</div>
-					</div>
+					</div>					
 					<div class="col-lg-7">
 						<div class="wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="1s">
 							<div class="client-slider swiper-container">
 								<div class="swiper-wrapper">
+								<?php
+								while( $testimonials->have_posts() ):
+									$testimonials->the_post();
+									?>
 									<div class="item swiper-slide">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmd tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ve quisnostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis autein irure dolor in reprehenderit in voluptate velit esse cilleu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non </p>
-										<h6>Zachary Farmer</h6>
+										<p><?php the_content(); ?></p>
+										<h6><?php the_title(); ?></h6>
 										<p class="designation">developer</p>
 									</div>
-									<div class="item swiper-slide">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmd tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ve quisnostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis autein irure dolor in reprehenderit in voluptate velit esse cilleu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non </p>
-										<h6>graham bell</h6>
-										<p class="designation">designer</p>
-									</div>
-									<div class="item swiper-slide">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmd tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ve quisnostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis autein irure dolor in reprehenderit in voluptate velit esse cilleu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non </p>
-										<h6>packary Farmer</h6>
-										<p class="designation">manager</p>
-									</div>
+									<?php
+								endwhile;
+								?>
 								</div>
 								<div class="swiper-pagination"></div>
 							</div>
 						</div>
-					</div>
+					</div>					
 				</div>
 			</div>
+			<?php
+			endif;
+			wp_reset_postdata();
+			?>
 		</div>
 	</div>
 </section>

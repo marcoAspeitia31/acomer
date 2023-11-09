@@ -105,6 +105,7 @@ function acomer_setup() {
 	 * Register custom images sizes
 	 */
 	add_image_size( 'blog-grid', 370, 300, true );
+	add_image_size( 'testimonial-thumbnail', 300, 300, true );
 	
 }
 add_action( 'after_setup_theme', 'acomer_setup' );
@@ -212,3 +213,5 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+require_once get_template_directory() . '/inc/custom-queries.php';
