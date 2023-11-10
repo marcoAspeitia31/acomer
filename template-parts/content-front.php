@@ -23,12 +23,12 @@
 								<ul class="d-flex wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s">
 									<li>
 										<a href="#!">
-											<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/banner/applestore.png" alt="Apple Store">
+											<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/banner/appstore-2.png" alt="Apple Store">
 										</a>
 									</li>
 									<li>
 										<a href="#!">
-											<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/banner/playstore.png" alt="Play Store">
+											<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/banner/playstore-1.png" alt="Play Store">
 										</a>
 									</li>
 								</ul>
@@ -295,8 +295,8 @@
 			<?php
 			$testimonials = acomer_testimonials();
 
-			if( $testimonials->have_posts() ):
-			?>
+			if ( $testimonials->have_posts() ) :
+				?>
 			<div class="col-lg-12">
 				<div class="row align-items-center">
 					<div class="col-lg-5 position-relative">
@@ -305,7 +305,7 @@
 							<div class="client-img-slider swiper-container">
 								<div class="swiper-wrapper">
 									<?php
-									while( $testimonials->have_posts() ):
+									while ( $testimonials->have_posts() ) :
 										$testimonials->the_post();
 										?>
 										<div class="swiper-slide">
@@ -325,7 +325,7 @@
 							<div class="client-slider swiper-container">
 								<div class="swiper-wrapper">
 								<?php
-								while( $testimonials->have_posts() ):
+								while ( $testimonials->have_posts() ) :
 									$testimonials->the_post();
 									?>
 									<div class="item swiper-slide">
@@ -343,7 +343,7 @@
 					</div>					
 				</div>
 			</div>
-			<?php
+				<?php
 			endif;
 			wp_reset_postdata();
 			?>
