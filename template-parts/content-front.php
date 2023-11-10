@@ -18,16 +18,16 @@
 					<div class="row">
 						<div class="col-lg-7 order-1 order-lg-0">
 							<div class="text-area">
-								<h1 class="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">La mejor app de delivery food en Uruguay</h1>
-								<p class="wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad </p>
+								<h1 class="wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s"><?php echo esc_html( get_post_meta( get_the_ID(), 'front_page_banner_title', true ) ); ?></h1>
+								<p class="wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s"><?php echo esc_html( get_post_meta( get_the_ID(), 'front_page_banner_slogan', true ) ); ?></p>
 								<ul class="d-flex wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s">
 									<li>
-										<a href="#!">
+										<a target="_blank" href="<?php echo esc_url( get_post_meta( get_the_ID(), 'front_page_banner_app_store_url', true ) ); ?>">
 											<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/banner/appstore-2.png" alt="Apple Store">
 										</a>
 									</li>
 									<li>
-										<a href="#!">
+										<a target="_blank" href="<?php echo esc_url( get_post_meta( get_the_ID(), 'front_page_banner_google_play_url', true ) ); ?>">
 											<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/banner/playstore-1.png" alt="Play Store">
 										</a>
 									</li>
@@ -36,7 +36,16 @@
 						</div>
 						<div class="col-lg-5 order-0 order-lg-1">
 							<div class="image-area text-end wow fadeInRight" data-wow-delay="0.3s" data-wow-duration="1s">
-								<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/banner/banner-img1.png" alt="Banner">
+								<?php
+								echo wp_get_attachment_image( 
+									get_post_meta( get_the_ID(), 'front_page_banner_picture_id', true ),
+									'full',
+									false,
+									array(
+										'class' => 'img-fluid'
+									)
+								);
+								?>
 							</div>
 						</div>
 					</div>
