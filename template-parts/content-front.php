@@ -310,7 +310,16 @@
 										?>
 										<div class="swiper-slide">
 											<div class="image">
-												<?php the_post_thumbnail( 'testimonial-thumbnail', array( 'class' => 'img-fluid' ) ); ?>
+												<?php 
+												echo wp_get_attachment_image(
+													get_post_meta( get_the_ID(), 'testimonials_picture_id', true ),
+													'testimonial-thumbnail',
+													false,
+													array(
+														'class' => 'img-fluid'
+													)
+												);
+												?>
 											</div>
 										</div>
 										<?php
@@ -329,9 +338,9 @@
 									$testimonials->the_post();
 									?>
 									<div class="item swiper-slide">
-										<p><?php the_content(); ?></p>
+										<p><?php echo esc_html( get_post_meta( get_the_ID(), 'testimonials_opinion', true ) ); ?></p>
 										<h6><?php the_title(); ?></h6>
-										<p class="designation">developer</p>
+										<p class="designation"><?php echo esc_html( get_post_meta( get_the_ID(), 'testimonials_job_position', true ) ); ?></p>
 									</div>
 									<?php
 								endwhile;

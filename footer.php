@@ -25,15 +25,15 @@
 							<ul class="address">
 								<li class="d-flex align-items-center">
 									<i class="fas fa-map-marker-alt"></i>
-									<p>Merlo Uruguay</p>
+									<p class="mb-0">Merlo Uruguay</p>
 								</li>
 								<li class="d-flex align-items-center">
 									<i class="fas fa-phone-alt"></i>
-									<p>+598 99 955 311</p>
+									<p class="mb-0">+598 99 955 311</p>
 								</li>
 								<li class="d-flex align-items-center">
 									<i class="far fa-envelope"></i>
-									<p>hola@acomer.app</p>
+									<p class="mb-0">hola@acomer.app</p>
 								</li>
 							</ul>
 						</div>
@@ -88,7 +88,7 @@
 									<p>Copyright &copy; 2023 Al Right Reserved</p>
 								</div>
 								<div class="col-lg-6 col-md-6">
-									<p class="text-end">
+									<p class="text-md-end">
 										<?php
 										/* translators: 1: Theme name, 2: Theme author. */
 										printf( esc_html__( 'Diseño realizado por %1$s.', 'acomer' ), '<a href="https://devitm.com/">DevITM</a>' );

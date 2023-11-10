@@ -64,10 +64,7 @@
 							?>
 							<div class="right-part">
 								<ul class="d-flex align-items-center">
-									<li>
-										<button data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="flaticon-loupe"></i></button>
-									</li>
-									<li><a href="contact.html">try for free</a></li>
+									<li><a href="contact.html">Contactar</a></li>
 								</ul>
 							</div>
 						</nav>
