@@ -99,31 +99,23 @@
 <section class="home1 counter p-100" data-img="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/count/bg.jpg">
 	<div class="overlay">
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-3 col-md-6">
-					<div class="item item1 text-center wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-						<h4>download</h4>
-						<h2 class="odometer odometer-auto-theme" data-count="9652">0000</h2>
+			<div class="row justify-content-center">
+				<?php
+				$counters = get_post_meta( get_the_ID(), 'front_page_counter_counters', true );
+
+				if( ! empty( $counters ) ):
+					foreach( $counters as $counter ):
+					?>
+					<div class="col-lg-3 col-md-6">
+						<div class="item item1 text-center wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+							<h4><?php echo in_array( 'title', $counter ) ? esc_html( $counter[ 'title' ] ) : ''; ?></h4>
+							<h2 class="odometer odometer-auto-theme" data-count="<?php echo esc_attr( $counter[ 'number' ] )?>">0000</h2>
+						</div>
 					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="item item2 text-center wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
-						<h4>good reviews</h4>
-						<h2 class="odometer odometer-auto-theme" data-count="4789">0000</h2>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="item item3 text-center wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
-						<h4>customers</h4>
-						<h2 class="odometer odometer-auto-theme" data-count="960">000</h2>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="item item4 text-center wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s">
-						<h4>projects</h4>
-						<h2 class="odometer odometer-auto-theme" data-count="6400">0000</h2>
-					</div>
-				</div>
+					<?php
+					endforeach;
+				endif;
+				?>
 			</div>
 		</div>
 	</div>
