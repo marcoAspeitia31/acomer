@@ -85,7 +85,15 @@
 						<div class="bg">
 							<div class="row">
 								<div class="col-lg-6 col-md-6">
-									<p>Copyright &copy; 2023 Al Right Reserved</p>
+									<?php echo esc_html__( 'Derechos reservados &copy; por', 'acomer' ); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo(); ?></a> 
+									<?php
+									echo esc_html(
+										date_i18n(
+											/* translators: Copyright date format, see https://www.php.net/manual/datetime.format.php */
+											_x( 'Y', 'copyright date format', 'acomer' )
+										)
+									);
+									?>
 								</div>
 								<div class="col-lg-6 col-md-6">
 									<p class="text-md-end">

@@ -78,7 +78,7 @@
 						<div class="col-lg-4 col-md-6">
 							<div class="item wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
 								<div class="icon">
-									<i class="flaticon-setup"></i>
+									<i class="flaticon-ribbon"></i>
 								</div>
 								<h5><?php echo esc_html( $feature[ 'title' ] )?></h5>
 								<p><?php echo esc_html( $feature[ 'content' ] )?></p>
@@ -102,36 +102,24 @@
 			<div class="row">
 				<div class="col-lg-3 col-md-6">
 					<div class="item item1 text-center wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-						<div class="icon">
-							<i class="flaticon-cloud"></i>
-						</div>
 						<h4>download</h4>
 						<h2 class="odometer odometer-auto-theme" data-count="9652">0000</h2>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<div class="item item2 text-center wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
-						<div class="icon">
-							<i class="flaticon-pointed-star"></i>
-						</div>
 						<h4>good reviews</h4>
 						<h2 class="odometer odometer-auto-theme" data-count="4789">0000</h2>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<div class="item item3 text-center wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
-						<div class="icon">
-							<i class="flaticon-customer-service"></i>
-						</div>
 						<h4>customers</h4>
 						<h2 class="odometer odometer-auto-theme" data-count="960">000</h2>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6">
 					<div class="item item4 text-center wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s">
-						<div class="icon">
-							<i class="flaticon-briefing"></i>
-						</div>
 						<h4>projects</h4>
 						<h2 class="odometer odometer-auto-theme" data-count="6400">0000</h2>
 					</div>
