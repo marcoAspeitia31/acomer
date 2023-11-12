@@ -15,7 +15,7 @@ get_header();
 		<section class="error-404 not-found">
 
 			<!-- start page-header -->
-			<header class="entry-header inner-page banner page-header" data-img="<?php echo esc_url( get_template_directory_uri(  ) ); ?>/assets/images/inner/error-404-acomer.jpg">
+			<header class="entry-header inner-page banner page-header" data-img="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/inner/error-404-acomer.jpg">
 				<div class="overlay">
 					<div class="container">
 						<div class="row">
@@ -35,7 +35,7 @@ get_header();
 						<div class="page-content my-0">
 							<h3><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'acomer' ); ?></h3>
 							<p class="mb-4"><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'acomer' ); ?></p>
-							<?php  get_search_form(); ?>
+							<?php get_search_form(); ?>
 							<p class="my-4"><?php esc_html_e( 'Or', 'acomer' ); ?></p>
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="btn btn-primary py-3 px-5"><?php esc_html_e( 'Go to home page', 'acomer' ); ?></a>
 						</div><!-- .page-content -->

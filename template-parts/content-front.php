@@ -42,7 +42,7 @@
 									'full',
 									false,
 									array(
-										'class' => 'img-fluid'
+										'class' => 'img-fluid',
 									)
 								);
 								?>
@@ -71,20 +71,22 @@
 					<?php
 					$features = get_post_meta( get_the_ID(), 'front_page_features_features', true );
 
-					if( ! empty( $features ) ):
+					if ( ! empty( $features ) ) :
 
-						foreach( $features as $feature ):
-						?>
-						<div class="col-lg-4 col-md-6">
-							<div class="item wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-								<div class="icon">
-									<i class="flaticon-ribbon"></i>
+						foreach ( $features as $feature ) :
+							?>
+							<div class="col-lg-4 col-md-6">
+								<div class="item wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+									<?php if ( array_key_exists( 'icon', $feature ) ) : ?>
+										<div class="icon">
+											<i class="<?php echo esc_attr( $feature['icon'] ); ?>"></i>
+										</div>
+									<?php endif; ?>
+									<h5><?php echo array_key_exists( 'title', $feature ) ? esc_html( $feature['title'] ) : ''; ?></h5>
+									<p><?php echo array_key_exists( 'content', $feature ) ? esc_html( $feature['content'] ) : ''; ?></p>
 								</div>
-								<h5><?php echo esc_html( $feature[ 'title' ] )?></h5>
-								<p><?php echo esc_html( $feature[ 'content' ] )?></p>
 							</div>
-						</div>
-						<?php
+							<?php
 						endforeach;
 					endif;
 					?>
@@ -103,16 +105,16 @@
 				<?php
 				$counters = get_post_meta( get_the_ID(), 'front_page_counter_counters', true );
 
-				if( ! empty( $counters ) ):
-					foreach( $counters as $counter ):
-					?>
-					<div class="col-lg-3 col-md-6">
-						<div class="item item1 text-center wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-							<h4><?php echo in_array( 'title', $counter ) ? esc_html( $counter[ 'title' ] ) : ''; ?></h4>
-							<h2 class="odometer odometer-auto-theme" data-count="<?php echo esc_attr( $counter[ 'number' ] )?>">0000</h2>
+				if ( ! empty( $counters ) ) :
+					foreach ( $counters as $counter ) :
+						?>
+						<div class="col-lg-3 col-md-6">
+							<div class="item item1 text-center wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+								<h4><?php echo array_key_exists( 'title', $counter ) ? esc_html( $counter['title'] ) : ''; ?></h4>
+								<h2 class="odometer odometer-auto-theme" data-count="<?php echo esc_attr( $counter['number'] ); ?>">0000</h2>
+							</div>
 						</div>
-					</div>
-					<?php
+						<?php
 					endforeach;
 				endif;
 				?>
@@ -130,33 +132,42 @@
 				<div class="row align-items-center">
 					<div class="col-lg-5">
 						<div class="image text-center wow fadeInLeft" data-wow-delay="0.3s" data-wow-duration="1s">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/about/img-app-1.png" alt="About">
+							<?php
+							echo wp_get_attachment_image( 
+								get_post_meta( get_the_ID(), 'front_page_first_info_picture_id', 'true' ),
+								'full',
+								true,
+								array(
+									'class' => 'img-fluid',
+								)
+							);
+							?>
 						</div>
 					</div>
 					<div class="col-lg-7">
 						<div class="content wow fadeInRight" data-wow-delay="0.3s" data-wow-duration="1s">
-							<h3>Amazing Consulting Provider Agency to Our Best </h3>
-							<p>We work with the public sector to build thriving communities. And we ork with regulators and financial institutions to build trust and integrity in ets uis aliqua sunt nisi consectetur anim.</p>
-							<ul>
-								<li class="d-flex">
-									<div class="icon">
-										<i class="flaticon-ribbon"></i>
-									</div>
-									<div class="text">
-										<h6>Pixel Perfect Modern Layout</h6>
-										<p>Medixer Care will be administered through plan-based omizable   incorporate partnership between family.</p>
-									</div>
-								</li>
-								<li class="d-flex">
-									<div class="icon">
-										<i class="flaticon-24-hours"></i>
-									</div>
-									<div class="text">
-										<h6>24/7 support</h6>
-										<p>Medixer Care will be administered through plan-based omizable   incorporate partnership between family.</p>
-									</div>
-								</li>
-							</ul>
+							<h3><?php echo esc_html( get_post_meta( get_the_ID(), 'front_page_first_info_title', true ) ); ?></h3>
+							<p><?php echo esc_html( get_post_meta( get_the_ID(), 'front_page_first_info_content', true ) ); ?></p>
+							<?php
+							$stand_outs = get_post_meta( get_the_ID(), 'front_page_first_info_stand_out_information', true );
+							if ( ! empty( $stand_outs ) ) :
+								?>
+								<ul>
+									<?php foreach ( $stand_outs as $information ) : ?>
+										<li class="d-flex">
+											<?php if ( array_key_exists( 'icon', $information ) ) : ?>
+												<div class="icon">
+													<i class="<?php echo esc_attr( $information['icon'] ); ?>"></i>
+												</div>
+											<?php endif; ?>
+											<div class="text">
+												<h6><?php echo esc_html( $information['title'] ); ?></h6>
+												<p><?php echo esc_html( $information['content'] ); ?></p>
+											</div>
+										</li>
+									<?php endforeach; ?>
+								</ul>
+							<?php endif; ?>
 						</div>
 					</div>
 				</div>
@@ -165,33 +176,44 @@
 				<div class="row align-items-center">
 					<div class="col-lg-7 order-1 order-lg-0">
 						<div class="content wow fadeInLeft" data-wow-delay="0.3s" data-wow-duration="1s">
-							<h3>Optimize Your Business Data as You Want, Easily!</h3>
-							<p>We work with the public sector to build thriving communities. And we ork with regulators and financial institutions to build trust and integrity in ets uis aliqua sunt nisi consectetur anim.</p>
-							<ul>
-								<li class="d-flex">
-									<div class="icon">
-										<i class="flaticon-mobile-app-developing"></i>
-									</div>
-									<div class="text">
-										<h6>Fully Responsive Across Devices</h6>
-										<p>Medixer Care will be administered through plan-based omizable   incorporate partnership between family.</p>
-									</div>
-								</li>
-								<li class="d-flex">
-									<div class="icon">
-										<i class="flaticon-setup"></i>
-									</div>
-									<div class="text">
-										<h6>High Performance Theme</h6>
-										<p>Medixer Care will be administered through plan-based omizable   incorporate partnership between family.</p>
-									</div>
-								</li>
-							</ul>
+							<h3><?php echo esc_html( get_post_meta( get_the_ID(), 'front_page_second_info_title', true ) ); ?></h3>
+							<p><?php echo esc_html( get_post_meta( get_the_ID(), 'front_page_second_info_content', true ) ); ?></p>
+							<?php
+							$stand_outs_two = get_post_meta( get_the_ID(), 'front_page_second_info_stand_out_information', true );
+							if ( ! empty( $stand_outs_two ) ) :
+								?>
+								<ul>
+									<?php foreach ( $stand_outs_two as $information ) : ?>
+										<li class="d-flex">
+											<?php if ( array_key_exists( 'icon', $information ) ) : ?>
+												<div class="icon">
+													<i class="<?php echo esc_attr( $information['icon'] ); ?>"></i>
+												</div>
+											<?php endif; ?>
+											<div class="text">
+												<h6><?php echo esc_html( $information['title'] ); ?></h6>
+												<p><?php echo esc_html( $information['content'] ); ?></p>
+											</div>
+										</li>
+									<?php endforeach; ?>
+								</ul>
+								<?php
+							endif;
+							?>
 						</div>
 					</div>
 					<div class="col-lg-5 order-0 order-lg-1">
 						<div class="image text-center wow fadeInRight" data-wow-delay="0.3s" data-wow-duration="1s">
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/about/img-app-2.png" alt="About">
+							<?php
+							echo wp_get_attachment_image( 
+								get_post_meta( get_the_ID(), 'front_page_second_info_picture_id', 'true' ),
+								'full',
+								true,
+								array(
+									'class' => 'img-fluid',
+								)
+							);
+							?>
 						</div>
 					</div>
 				</div>
@@ -292,7 +314,7 @@
 													'testimonial-thumbnail',
 													false,
 													array(
-														'class' => 'img-fluid'
+														'class' => 'img-fluid',
 													)
 												);
 												?>
