@@ -232,21 +232,30 @@
 					<div class="row">
 						<div class="col-lg-5">
 							<div class="image">
-								<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/img-cta-1.png" alt="Mobile">
+								<?php
+								echo wp_get_attachment_image(
+									get_post_meta( get_the_ID(), 'front_page_cta_picture_id', 'true' ),
+									'full',
+									false,
+									array(
+										'class' => 'img-fluid'
+									)
+								);
+								?>
 							</div>
 						</div>
 						<div class="col-lg-7">
 							<div class="content">
-								<h3>Get Mobile App Only Here</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+								<h3><?php echo esc_html( get_post_meta( get_the_ID(), 'front_page_cta_title', true ) ); ?></h3>
+								<p><?php echo esc_html( get_post_meta( get_the_ID(), 'front_page_cta_content', true ) ); ?></p>
 								<ul class="d-flex">
 									<li>
-										<a href="#!">
+										<a href="<?php echo esc_attr( get_post_meta( get_the_ID(), 'front_page_cta_app_store_url', true ) ); ?>">
 											<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/banner/applestore.png" alt="Apple Store">
 										</a>
 									</li>
 									<li>
-										<a href="#!">
+										<a href="<?php echo esc_attr( get_post_meta( get_the_ID(), 'front_page_cta_google_play_url', true ) ); ?>">
 											<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/banner/playstore.png" alt="Play Store">
 										</a>
 									</li>
