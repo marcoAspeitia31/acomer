@@ -15,7 +15,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="content text-center">
-						<h1><?php echo esc_html( get_the_title( get_option( 'page_for_posts', true ) ) ); ?></h1>
+						<h1><?php echo esc_html( is_archive() ? the_archive_title() : get_the_title( get_option( 'page_for_posts', true ) ) ); ?></h1>
 						<nav aria-label="breadcrumb">
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Inicio</a></li>
