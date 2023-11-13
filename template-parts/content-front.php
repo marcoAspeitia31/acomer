@@ -378,37 +378,3 @@
 	</div>
 </section>
 <!-- end client area -->
-
-<!-- start brand area -->
-<section class="home1 brand p-100">
-	<div class="container">
-		<div class="row">
-			<div class="col">
-				<div class="brand-logo text-center wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
-					<a href="#!"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/brand/brand-logo1.png" class="img-fluid" alt="Brand Logo" /></a>
-				</div>
-			</div>
-			<div class="col">
-				<div class="brand-logo text-center wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="1s">
-					<a href="#!"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/brand/brand-logo2.png" class="img-fluid" alt="Brand Logo" /></a>
-				</div>
-			</div>
-			<div class="col mt-sm-30">
-				<div class="brand-logo text-center wow fadeInUp" data-wow-delay="0.6s" data-wow-duration="1s">
-					<a href="#!"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/brand/brand-logo3.png" class="img-fluid" alt="Brand Logo" /></a>
-				</div>
-			</div>
-			<div class="col mt-sm-30">
-				<div class="brand-logo text-center wow fadeInUp" data-wow-delay="0.7s" data-wow-duration="1s">
-					<a href="#!"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/brand/brand-logo4.png" class="img-fluid" alt="Brand Logo" /></a>
-				</div>
-			</div>
-			<div class="col mt-sm-30">
-				<div class="brand-logo text-center wow fadeInUp" data-wow-delay="0.8s" data-wow-duration="1s">
-					<a href="#!"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/brand/brand-logo5.png" class="img-fluid" alt="Brand Logo" /></a>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- end brand area -->
