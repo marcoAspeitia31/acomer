@@ -7,6 +7,7 @@
  * @package acomer
  */
 
+ //printf( '<pre>%s</pre>', var_export( get_post_custom( get_the_ID(  ) ), true ) );
 ?>
 
 <!-- start banner area -->
@@ -271,16 +272,16 @@
 <!-- end mobile area -->
 
 <!-- start video area -->
-<section class="home1 video" data-img="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/video-img-bg.jpg">
+<section class="home1 video" data-img="<?php echo esc_attr( wp_get_attachment_image_url( get_post_meta( get_the_ID(), 'front_page_video_bg_id', true ), 'full', false ) ); ?>">
 	<div class="overlay">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="content text-center">
-						<a class="vid-icon venobox" data-autoplay="true" data-vbtype="video" href="https://www.youtube.com/watch?v=LCmsrVOXzZc">
+						<a class="vid-icon venobox" data-autoplay="true" data-vbtype="video" href="<?php echo esc_attr( get_post_meta( get_the_ID(), 'front_page_video_video', true ) ); ?>">
 							<i class="fas fa-play"></i>
 						</a>
-						<p>working video</p>
+						<p><?php echo esc_html( get_post_meta( get_the_ID(), 'front_page_video_title', true ) ); ?></p>
 					</div>
 				</div>
 			</div>
@@ -295,8 +296,8 @@
 		<div class="row">
 			<div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
 				<div class="section-title wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="1s">
-					<h2>customers love</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod te incididunt ut labore et dolore magna aliqua. Ut enim ad minim to eismud </p>
+					<h2><?php echo esc_html( get_post_meta( get_the_ID(), 'front_page_testimonials_title', true ) ); ?></h2>
+					<p><?php echo esc_html( get_post_meta( get_the_ID(), 'front_page_testimonials_content', true ) ); ?></p>
 				</div>
 			</div>
 			<?php
