@@ -7,7 +7,7 @@
  * @package acomer
  */
 
- //printf( '<pre>%s</pre>', var_export( get_post_custom( get_the_ID(  ) ), true ) );
+ // printf( '<pre>%s</pre>', var_export( get_post_custom( get_the_ID(  ) ), true ) );
 ?>
 
 <!-- start banner area -->
@@ -239,7 +239,7 @@
 									'full',
 									false,
 									array(
-										'class' => 'img-fluid'
+										'class' => 'img-fluid',
 									)
 								);
 								?>
@@ -301,65 +301,75 @@
 				</div>
 			</div>
 			<?php
-			$testimonials = acomer_testimonials();
+			$posts_per_page = get_post_meta( get_the_ID(), 'front_page_testimonials_number', true );
+
+			if ( $posts_per_page > 0 ) :
+
+				$testimonials = acomer_testimonials( $posts_per_page );
+
+			else:
+
+				$testimonials = acomer_testimonials();
+
+			endif;
 
 			if ( $testimonials->have_posts() ) :
 				?>
-			<div class="col-lg-12">
-				<div class="row align-items-center">
-					<div class="col-lg-5 position-relative">
-						<div class="wow fadeInLeft" data-wow-delay="0.4s" data-wow-duration="1s">
-							<div class="shape"></div>
-							<div class="client-img-slider swiper-container">
-								<div class="swiper-wrapper">
+				<div class="col-lg-12">
+					<div class="row align-items-center">
+						<div class="col-lg-5 position-relative">
+							<div class="wow fadeInLeft" data-wow-delay="0.4s" data-wow-duration="1s">
+								<div class="shape"></div>
+								<div class="client-img-slider swiper-container">
+									<div class="swiper-wrapper">
+										<?php
+										while ( $testimonials->have_posts() ) :
+											$testimonials->the_post();
+											?>
+											<div class="swiper-slide">
+												<div class="image">
+													<?php 
+													echo wp_get_attachment_image(
+														get_post_meta( get_the_ID(), 'testimonials_picture_id', true ),
+														'testimonial-thumbnail',
+														false,
+														array(
+															'class' => 'img-fluid',
+														)
+													);
+													?>
+												</div>
+											</div>
+											<?php
+										endwhile;
+										?>
+									</div>
+								</div>
+							</div>
+						</div>					
+						<div class="col-lg-7">
+							<div class="wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="1s">
+								<div class="client-slider swiper-container">
+									<div class="swiper-wrapper">
 									<?php
 									while ( $testimonials->have_posts() ) :
 										$testimonials->the_post();
 										?>
-										<div class="swiper-slide">
-											<div class="image">
-												<?php 
-												echo wp_get_attachment_image(
-													get_post_meta( get_the_ID(), 'testimonials_picture_id', true ),
-													'testimonial-thumbnail',
-													false,
-													array(
-														'class' => 'img-fluid',
-													)
-												);
-												?>
-											</div>
+										<div class="item swiper-slide">
+											<p><?php echo esc_html( get_post_meta( get_the_ID(), 'testimonials_opinion', true ) ); ?></p>
+											<h6><?php the_title(); ?></h6>
+											<p class="designation"><?php echo esc_html( get_post_meta( get_the_ID(), 'testimonials_job_position', true ) ); ?></p>
 										</div>
 										<?php
 									endwhile;
 									?>
-								</div>
-							</div>
-						</div>
-					</div>					
-					<div class="col-lg-7">
-						<div class="wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="1s">
-							<div class="client-slider swiper-container">
-								<div class="swiper-wrapper">
-								<?php
-								while ( $testimonials->have_posts() ) :
-									$testimonials->the_post();
-									?>
-									<div class="item swiper-slide">
-										<p><?php echo esc_html( get_post_meta( get_the_ID(), 'testimonials_opinion', true ) ); ?></p>
-										<h6><?php the_title(); ?></h6>
-										<p class="designation"><?php echo esc_html( get_post_meta( get_the_ID(), 'testimonials_job_position', true ) ); ?></p>
 									</div>
-									<?php
-								endwhile;
-								?>
+									<div class="swiper-pagination"></div>
 								</div>
-								<div class="swiper-pagination"></div>
 							</div>
-						</div>
-					</div>					
+						</div>					
+					</div>
 				</div>
-			</div>
 				<?php
 			endif;
 			wp_reset_postdata();
