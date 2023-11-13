@@ -19,13 +19,13 @@
 					<div class="col-lg-4 col-md-6">
 						<div class="content">
 							<div class="title">
-								<h5>Get in Touch</h5>
+								<h5>Iformación de contacto</h5>
 							</div>
-							<p class="desc">Lorem ipsum dolor sit am co adipisicing elit, sed do eiusmod tempor</p>
+							<p class="desc"><?php echo esc_html( get_bloginfo( 'description' ) ); ?></p>
 							<ul class="address">
 								<li class="d-flex align-items-center">
 									<i class="fas fa-map-marker-alt"></i>
-									<p class="mb-0">Merlo Uruguay</p>
+									<p class="mb-0">Justino Muniz 525 C.P. 37000, en Cerro Largo, Uruguay.</p>
 								</li>
 								<li class="d-flex align-items-center">
 									<i class="fas fa-phone-alt"></i>

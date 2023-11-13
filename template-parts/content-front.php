@@ -307,7 +307,7 @@
 
 				$testimonials = acomer_testimonials( $posts_per_page );
 
-			else:
+			else :
 
 				$testimonials = acomer_testimonials();
 
