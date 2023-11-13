@@ -251,12 +251,12 @@
 								<p><?php echo esc_html( get_post_meta( get_the_ID(), 'front_page_cta_content', true ) ); ?></p>
 								<ul class="d-flex">
 									<li>
-										<a href="<?php echo esc_attr( get_post_meta( get_the_ID(), 'front_page_cta_app_store_url', true ) ); ?>">
+										<a href="<?php echo esc_attr( get_post_meta( get_the_ID(), 'front_page_cta_app_store_url', true ) ); ?>" target="_blank">
 											<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/banner/applestore.png" alt="Apple Store">
 										</a>
 									</li>
 									<li>
-										<a href="<?php echo esc_attr( get_post_meta( get_the_ID(), 'front_page_cta_google_play_url', true ) ); ?>">
+										<a href="<?php echo esc_attr( get_post_meta( get_the_ID(), 'front_page_cta_google_play_url', true ) ); ?>" target="_blank">
 											<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home1/banner/playstore.png" alt="Play Store">
 										</a>
 									</li>

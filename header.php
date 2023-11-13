@@ -47,10 +47,8 @@
 					<div class="col-lg-12">
 						<nav class="navbar p-0">
 							<!-- header logo -->
-							<a class="navbar-brand p-0" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-								<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/acomer-logo.png" alt="Logo" />
-							</a>
 							<?php
+							the_custom_logo();
 							wp_nav_menu(
 								array(
 									'menu_id'         => 'primary-menu',
