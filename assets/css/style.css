@@ -2346,6 +2346,7 @@ p {
   color: var(--grey);
   font-weight: 500;
 }
+
 .blog-page.blog-detail .comment textarea.input-field,
 .blog-page.blog-detail .comment textarea {
   height: 215px;

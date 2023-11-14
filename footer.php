@@ -19,7 +19,7 @@
 					<div class="col-lg-4 col-md-6">
 						<div class="content">
 							<div class="title">
-								<h5>Iformación de contacto</h5>
+								<h5>Información de básica</h5>
 							</div>
 							<p class="desc"><?php echo esc_html( get_bloginfo( 'description' ) ); ?></p>
 							<ul class="address">

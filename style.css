@@ -763,6 +763,12 @@ textarea {
 	margin: 0 0 1.5em;
 }
 
+input#wp-comment-cookies-consent {
+	height: auto;
+	width: auto;
+	margin-bottom: 20px;
+}
+
 /* Comments
 --------------------------------------------- */
 .comment-content a {
@@ -796,8 +802,7 @@ textarea {
 
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
-	display: inline-block;
-	width: 80px;
+	width: 60px;
 }
 
 /* Captions
