@@ -43,7 +43,7 @@ add_action( 'after_setup_theme', 'acomer_woocommerce_setup' );
  * @return void
  */
 function acomer_woocommerce_scripts() {
-	wp_enqueue_style( 'acomer-woocommerce-style', get_template_directory_uri() . '/woocommerce.css', array(), _S_VERSION );
+	wp_enqueue_style( 'acomer-woocommerce-style', get_template_directory_uri() . '/woocommerce.css', array(), A_COMER_VERSION );
 
 	$font_path   = WC()->plugin_url() . '/assets/fonts/';
 	$inline_font = '@font-face {

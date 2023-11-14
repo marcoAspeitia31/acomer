@@ -12,30 +12,43 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-		<?php if ( have_posts() ) : ?>
+		<?php
+		if ( have_posts() ) :
 
-			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+			get_template_part( 'template-parts/general/home', 'breadcrumbs' );
+
+			?>
+
+			<!-- start blog area -->
+			<section class="home1 blog-page blog pt-120 pb-90">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="row justify-content-center">
+								<?php
+								/* Start the Loop */
+								while ( have_posts() ) :
+									the_post();
+
+									/*
+									* Include the Post-Type-specific template for the content.
+									* If you want to override this in a child theme, then include a file
+									* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+									*/
+									get_template_part( 'template-parts/general/blog', 'grid' );
+
+								endwhile;
+
+								the_posts_navigation();
+								?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end blog area -->
 
 			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
-
-			endwhile;
-
-			the_posts_navigation();
 
 		else :
 
@@ -47,5 +60,4 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();

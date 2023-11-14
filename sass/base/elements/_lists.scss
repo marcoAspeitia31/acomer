@@ -1,18 +1,18 @@
-ul,
-ol {
+.entry-content ul,
+.entry-content ol {
 	margin: 0 0 1.5em 3em;
 }
 
-ul {
+.entry-content ul {
 	list-style: disc;
 }
 
-ol {
+.entry-content ol {
 	list-style: decimal;
 }
 
-li > ul,
-li > ol {
+.entry-content li > ul,
+.entry-content li > ol {
 	margin-bottom: 0;
 	margin-left: 1.5em;
 }
